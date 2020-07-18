@@ -6,14 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "yashadf1233"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://kev-dev-yashadf.vault.azure.net/"
-		},
-		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
-			"type": "string",
-			"defaultValue": "sec-dev-adfyash"
 		}
 	},
 	"variables": {
@@ -28,7 +20,7 @@
 				"annotations": [],
 				"type": "AzureKeyVault",
 				"typeProperties": {
-					"baseUrl": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					"baseUrl": "https://kev-dev-yashadf.vault.azure.net/"
 				}
 			},
 			"dependsOn": []
@@ -47,7 +39,7 @@
 							"referenceName": "AzureKeyVault1",
 							"type": "LinkedServiceReference"
 						},
-						"secretName": "[parameters('AzureBlobStorage1_properties_typeProperties_connectionString_secretName')]"
+						"secretName": "sec-dev-adfyash"
 					}
 				}
 			},
@@ -203,8 +195,7 @@
 						"inputs": [
 							{
 								"referenceName": "DelimitedText1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [

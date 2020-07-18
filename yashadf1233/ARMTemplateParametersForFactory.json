@@ -5,8 +5,11 @@
 		"factoryName": {
 			"value": "yashadf1233"
 		},
-		"AzureBlobStorage1_connectionString": {
-			"value": ""
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://kev-dev-yashadf.vault.azure.net/"
+		},
+		"AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"value": "sec-dev-adfyash"
 		}
 	}
 }
